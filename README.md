@@ -1,1 +1,3 @@
-# pos_retail_modulos
+# Repositorio donde se almacena los modulos
+___________________________________________________________________________
+Etc etc ...
