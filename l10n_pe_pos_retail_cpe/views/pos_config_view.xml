@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="pos_config_cpe_view_form" model="ir.ui.view">
+        <field name="name">pos.config.form.view.inherit.l10n.pe.cpe</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/div[last()]" position="inside">
+                <div class="col-xs-12 col-md-6 o_setting_box">
+                    <div class="o_setting_left_pane">
+                        <field name="pe_auto_serie_select"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="pe_auto_serie_select" string="Auto Select Serie"/>
+                        <div class="text-muted">
+                            Enables the use of series auto select in the Point of Sale depending on customer document
+                            type.
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="pos_config_retail_inherit" model="ir.ui.view">
+        <field name="name">pos.config.retail.inherit</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="pos_retail.pos_config_retail"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='auto_nextscreen_when_validate_payment']" position="before">
+                <field name="auto_download_order_in_json"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

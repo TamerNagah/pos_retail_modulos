@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_pos_invoice_refund" model="ir.ui.view">
+            <field name="name">pos.invoice.refund.wizard.form</field>
+            <field name="model">pos.invoice.refund.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Credit Note">
+                    <group>
+                        <group>
+                            <field name="type" widget="selection" required="True" />
+                        </group>
+                        <group>
+                            <field name="pe_credit_note_code" attrs="{'invisible': [('type','=','annul')], 'required':[('type','=','refund')]}" />
+                            <field name="order_id" invisible="True" />
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Add Credit Note/Annul" name="pos_refund" type="object" class="btn-primary" />
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_pos_invoice_refund" model="ir.actions.act_window">
+            <field name="name">Credit Note</field>
+            <field name="res_model">pos.invoice.refund.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_pos_invoice_refund" />
+            <field name="target">new</field>
+        </record>
+
+
+    </data>
+</odoo>

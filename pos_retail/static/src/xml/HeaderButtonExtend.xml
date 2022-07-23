@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="PosProfileWidget">
+        <div class="oe_status" style="float: left; border-left: 1px solid">
+            <span class="username">
+                POS No: <t t-esc="widget.get_name()" />
+            </span>
+        </div>
+    </t>
+
+    <t t-name="PosSessionWidget">
+        <div class="oe_status" style="float: left; border-left: 1px solid">
+            <span class="username">
+                Session ID: <t t-esc="widget.get_name()" />
+            </span>
+        </div>
+    </t>
+
+    <t t-name="PosSessionOpenedWidget">
+        <div class="oe_status" style="float: left; border-left: 1px solid">
+            <span class="username">
+                Opened Date: <t t-esc="widget.get_name()" />
+            </span>
+        </div>
+    </t>
+
+</templates>

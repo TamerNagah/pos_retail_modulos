@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+	<t t-extend="popup_create_customer">
+        <t t-jquery=".card-content" t-operation="replace">
+            <div class="card-content">
+                <h4 class="card-title"><t t-esc=" widget.options.title || '' " /></h4>
+                <div class="col-md-4 col-sm-4">
+                    <div class="form-group label-floating">
+                        <div class='client-picture'>
+                            <t><i class='fa fa-camera'></i></t>
+                            <input type='file' class='image-uploader'></input>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-details-box clearfix">
+                    <div class="client-details-left">
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Name
+                            </span>
+                            <input class="form-control partner_input input_required" name="name"
+                                   required="true"/>
+                        </div>
+                        <t t-if="widget.pos.partner_titles">
+                            <div class="row">
+                                <span class='label voucher-label'>Title</span>
+                                <select class='form-control voucher-select partner_input' name='title'>
+                                     <t t-foreach='widget.pos.partner_titles' t-as='partner_title'>
+                                        <option t-att-value='partner_title.id'>
+                                            <t t-esc='partner_title.name'/>
+                                        </option>
+                                    </t>
+                                </select>
+                            </div>
+                        </t>
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Tipo de documento
+                            </span>
+                            <select class='form-control voucher-select partner_input' style="background: gold;"
+                                    name='l10n_latam_identification_type_id'>
+                                <option value=''>None</option>
+                                <t t-foreach='widget.pos.doc_types' t-as='doc_type'>
+                                    <option t-att-value='doc_type.id'>
+                                        <t t-esc='doc_type.name'/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                # Documento
+                            </span>
+                            <input class='form-control partner_input doc_number' style="background: gold;" name='vat'/>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>Email</span>
+                            <input class="form-control partner_input" name="email" required="true"/>
+                        </div>
+                        <!--
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                País
+                            </span>
+                            <select class='form-control voucher-select partner_input' name='country_id'>
+                                <option value=''>None</option>
+                                <t t-foreach='widget.pos.countries' t-as='country'>
+                                    <option t-att-value='country.id'
+                                    >
+                                        <t t-esc='country.name'/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        -->
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Departamento
+                            </span>
+                            <select class='form-control voucher-select partner_input' name='state_id'>
+                                <option value=''>None</option>
+                                <t t-foreach='widget.pos.cliente_departamento' t-as='state'>
+                                    <option t-att-value="state.code">
+                                        <t t-esc="state.name"/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Provincia
+                            </span>
+                            <select class='form-control voucher-select partner_input' name='province_id'>
+                                <option value=''>None</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Distrito
+                            </span>
+                            <select class='form-control voucher-select partner_input' name='district_id'>
+                                <option value=''>None</option>
+                            </select>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>
+                                Dirección
+                            </span>
+                            <input class='form-control partner_input' name='street'
+                                   placeholder='Street'/>
+                        </div>
+
+                        <input type="hidden" class='detail commercial_name' name='commercial_name'
+                               t-att-value='commercial_name || ""'/>
+                        <input type="hidden" class='detail legal_name' name='legal_name'
+                               t-att-value='legal_name || ""'/>
+                        <input type="hidden" class='detail last_update' name='last_update'
+                               t-att-value='last_update || ""'/>
+                        <input type="hidden" class='detail is_validate' name='is_validate'
+                               t-att-value='is_validate || ""'/>
+                        <input type="hidden" class='detail doc_type' name='doc_type'
+                               t-att-value='doc_type || ""'/>
+                    </div>
+                    <div class="client-details-right">
+                        <div class="row">
+                            <span class='label voucher-label'>Phone</span>
+                            <input class="form-control partner_input" name="phone" required="true"/>
+                        </div>
+                        <div class="row">
+                            <span class='label voucher-label'>Mobile</span>
+                            <input class="form-control partner_input" name="mobile" required="true"/>
+                        </div>
+                        <div class="row">
+                                    <span class='label voucher-label'>Barcode</span>
+                            <input class="form-control partner_input" name="barcode" required="true"/>
+                                </div>
+                        <div class='row'>
+                                    <span class='label voucher-label'>Internal notes</span>
+                            <input class='form-control partner_input' name='comment'></input>
+                                </div>
+                        <div class="row oe_hidden">
+                                    <span class='label voucher-label'>Tax ID</span>
+                            <input class="form-control partner_input vat" name="vat" required="true"/>
+                                </div>
+                        <t t-if="widget.pos.pricelists">
+                                    <div class="row">
+                                        <span class='label voucher-label'>Pricelist</span>
+                                        <select class='form-control voucher-select partner_input'
+                                                name='property_product_pricelist'>
+                                             <t t-foreach='widget.pos.pricelists' t-as='pricelist'>
+                                                <option t-att-value='pricelist.id'>
+                                                    <t t-esc='pricelist.display_name'/>
+                                                </option>
+                                            </t>
+                                        </select>
+                                    </div>
+                                </t>
+
+                        <div class='row client-detail partner-state'>
+                            <span class='label voucher-label'>State</span>
+                            <select class='form-control voucher-select partner_input' name='state'>
+                                <option value=''>None</option>
+                                <t t-foreach='widget.pos.partner_states' t-as='state'>
+                                    <option t-att-value='state.code'>
+                                        <t t-esc='state.name'/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                        <div class='row client-detail partner-condition'>
+                            <span class='label'>Condition</span>
+                            <select class='form-control voucher-select partner_input' name='condition'>
+                                <option value=''>None</option>
+                                <t t-foreach='widget.pos.partner_conditions' t-as='condition'>
+                                    <option t-att-value='condition.code'>
+                                        <t t-esc='condition.name'/>
+                                    </option>
+                                </t>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <span class="card-issue"/>
+                <div class="form-footer text-center">
+                            <div class="btn btn-success pull-right confirm">
+                                Confirm <i class="fa fa-keyboard"></i> (Enter)
+                            </div>
+                    <div class="btn btn-danger pull-left cancel">
+                                Close <i class="fa fa-keyboard"></i> (ESC)
+                            </div>
+                        </div>
+                    </div>
+        </t>
+	</t>
+
+    <t t-extend="OrderReceipt">
+        <t t-jquery="div[class='pos-receipt-contact']" t-operation="replace">
+            <div class="receipt-partner" t-if="order.get('client')">
+                <br/>
+                <t t-esc="order.get('client').name"/>
+                <br/>
+                <t t-if="order.get_doc_number()">
+                    RUC/DNI: <t t-esc="order.get_doc_number()"/>
+                    <br/>
+
+                </t>
+                <t t-if="order.get('client').street">
+                    Street: <t t-esc="order.get('client').street"/>
+                    <br/>
+                </t>
+
+            </div>
+        </t>
+        <t t-jquery='.pos-receipt-amount:first' t-operation="after">
+            <div>
+                SON <t t-esc="order.get_amount_text()"/>
+            </div>
+            <br/>
+        </t>
+    </t>
+    <t t-name="OrderReceiptHeader">
+        <t t-set="company" t-value="pos.company"/>
+        <t t-set="client" t-value="order.get('client')"/>
+        <div style="font-size: 12px; text-transform: uppercase;">
+            <div style="text-align:center;">
+                <img t-if="receipt.company.logo" t-att-src="receipt.company.logo" alt="Logo"
+                     style="min-height: 90px; max-height: 150px; max-width: 200px; display:block; margin-left: auto; margin-right: auto; top: 30%;"/>
+            </div>
+            <div style="text-align:center; font-size: 18px;">
+                <strong>
+                    <t t-esc="company.name"/>
+                </strong>
+            </div>
+            <div style="text-align:center;">
+                <span style="text-align:center;">RUC
+                    <t t-esc="company.vat"/>
+                </span>
+            </div>
+            <div style="text-align:center; text-transform: initial;">
+                <t t-if="company.contact_address"><strong>Sede: </strong>
+                    <t t-esc="company.contact_address.replace('\n', '').replaceAll('\n', ', ')"/></t>
+                <t t-if="company.website">, <t t-esc="company.website"/></t>
+                <t t-if="company.phone"><strong> Tlf: </strong>
+                    <t t-esc="company.phone"/></t>
+                <br/>
+                <t t-esc="company.email"/>
+            </div>
+            <hr style="width:100%;text-align:left;margin-left:0"/>
+            <t t-if="order.get_cpe_type()">
+                <strong>
+                    <t t-if="order.get_cpe_type()=='01'">Factura electrónica</t>
+                    <t t-if="order.get_cpe_type()=='03'">Boleta de venta electrónica</t>
+                    <br/>
+                    <t t-esc="order.get_number()"/>
+                </strong>
+                <hr style="width:100%;text-align:left;margin-left:0;margin-top:10px"/>
+            </t>
+            <div class="container p-0" style="font-size: 11px !important;">
+                <div class="row text-left">
+                    <div class="col-3 p-0">Fecha</div>
+                    <div class="col-1 p-0 text-center">:</div>
+                    <div class="col-8 p-0">
+                        <t t-esc="order.creation_date.toLocaleString()"/>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-3 p-0">Vendedor</div>
+                    <div class="col-1 p-0 text-center">:</div>
+                    <div class="col-8 p-0">
+                        <t t-esc="receipt.cashier"/>
+                    </div>
+                </div>
+                <!--
+                    <div class="row" t-if="receipt.currency">
+                        <div class="col-3">Moneda:</div>
+                        <div class="col-9"><t t-esc="receipt.currency.name"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Pedido</div>:
+                        <div class="col-9">
+                            <t t-esc="receipt.name"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">Forma de Pago</div>:
+                        <div class="col-9">Contado</div>
+                    </div>-->
+                <t t-if="client">
+                    <div class="row text-left">
+                        <div class="col-3 p-0">Cliente</div>
+                        <div class="col-1 p-0 text-center">:</div>
+                        <div class="col-8 p-0">
+                            <t t-esc="client.display_name"/>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-3 p-0">Numero</div>
+                        <div class="col-1 p-0 text-center">:</div>
+                        <div class="col-8 p-0">
+                            <t t-esc="client.vat"/>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-3 p-0">Dirección</div>
+                        <div class="col-1 p-0 text-center">:</div>
+                        <div class="col-12 p-0"><t t-esc="client.address"/></div>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+    <t t-extend="OrderReceiptFooter">
+        <t t-jquery='div[data-tag="el_footer"]' t-operation="append">
+            <div style="text-align:center">
+                <t t-if="order.get_cpe_type()">
+                    <br/>
+                    <div class="qr-code" id="qr-code" style="display: flex; justify-content: center;"></div>
+                    <br/>
+                    <b class="doc-sunat">Representación impresa de,
+                    <t t-if="order.get_cpe_type()=='01'">Factura </t>
+                        <t t-if="order.get_cpe_type()=='03'">Boleta de Venta </t>Electronica consulte en
+                        <t t-esc="widget.pos.company.website || ''"/> </b>
+                </t>
+            </div>
+        </t>
+    </t>
+</templates>

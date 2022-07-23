@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="pos_retail_report_invoice_document" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@id='qrcode']" position="before">
+                <p name="terms">
+                    Terms and Conditions:
+                    <span t-field="o.terms"/>
+                </p>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

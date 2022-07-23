@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="l10n_pe_pos_retail_assets_backend" inherit_id="pos_retail.assets_pos"
+              name="l10n_pe_pos_retail_assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/lib/qrcode.js"/>
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/lib/Blob.js"/>
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/lib/FileSaver.js"/>
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/js/l10n_pe_pos_cpe.js"/>
+
+            <link rel="stylesheet" href="/l10n_pe_pos_retail_cpe/static/src/css/pos_custom.css"/>
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/lib/NumeroALetras.js"/>
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/js/l10n_pe_pos.js"/>
+
+            <script type="text/javascript" src="/l10n_pe_pos_retail_cpe/static/src/screens/Payment.js"/>
+        </xpath>
+    </template>
+</odoo>

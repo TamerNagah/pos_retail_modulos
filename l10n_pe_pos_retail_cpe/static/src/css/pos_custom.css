@@ -1,0 +1,17 @@
+.pos .clientlist-screen .client-detail > .label{
+    width: 167px !important;
+    margin-right: 5px !important;
+}
+.pos .clientlist-screen .client-details input.client-name {
+    width: 410px !important;
+}
+.pos .clientlist-screen .client-details input,
+.pos .clientlist-screen .client-details select
+{
+    width: 320px !important;  
+}
+
+.pos .clientlist-screen .client-name {
+    font-size: 19px !important;
+    font-weight: 800;
+}
