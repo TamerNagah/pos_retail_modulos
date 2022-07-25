@@ -37,7 +37,7 @@
 
   <menuitem
     id="curso_menu"
-    name="Cursoos"
+    name="Cursooss"
     actions="test.action_list_curso"
     sequence=""/>   
 </odoo>
