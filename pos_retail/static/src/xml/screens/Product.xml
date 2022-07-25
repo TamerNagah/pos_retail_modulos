@@ -660,7 +660,7 @@
                         </div>
                     </div>
                 </t>
-                <div class="searchbox search-products w-100">
+                <div class="searchbox search-products w-100" style="background-color: #343a40 !important">
                     <input type="text" class="search-products" autocomplete="off"
                            placeholder="Search Products (Key:S)"/>
                     <span class="search-clear left">
