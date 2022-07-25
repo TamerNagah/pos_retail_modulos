@@ -34,9 +34,7 @@
     <menuitem
       id="menu_sesion"
       name="Sesion"
-      action="test.action_list_sesion"
-      parent="menu_root"
-      sequence="10"/>
+      action="test.action_list_sesion"/>
       
     </data>
 </odoo>
