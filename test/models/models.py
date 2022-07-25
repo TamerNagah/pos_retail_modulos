@@ -20,11 +20,3 @@ class Sesion(models.Model):
     
     curso = fields.Many2one('academia.curso', help='Curso de la sesion')
     instructor = fields.Many2one('res.users', help='Instructor del curso')     
-
-
-class List(models.Model):
-    _name = 'academia.list'
-    _description = 'Descripción de la lista'
-    
-    lista = fields.Char('litsaaaa',help='Lista de la sesion')   
-       
