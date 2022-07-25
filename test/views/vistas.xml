@@ -7,8 +7,6 @@
             <tree string="Vista tree">
                 <field name="title"/>
                 <field name="description"/>
-                <field name="create_uid"/>
-                <field name="create_date"/>
             </tree>
         </field>
     </record>
@@ -18,13 +16,11 @@
         <field name="arch" type="xml">
             <form string="vista form">
                 <header>
-                    <field name="create_uid"/>
                     <field name="title"/>
                     <field name="description"/>
                 </header>
                 <sheet>
                     <group>
-                        <field name="create_uid"/>
                         <field name="title"/>
                         <field name="description"/>
                     </group>
