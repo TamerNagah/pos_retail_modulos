@@ -229,7 +229,7 @@
 .pos .oe_status {
   font-style: normal;
   margin: 0px;
-  color: black;
+  color: #e9ecef;
   line-height: 20px;
   float: left;
   //border-left: 0px;
@@ -285,7 +285,7 @@
 }
 
 .pos .product:hover {
-  border: 2.5px solid #ced4da;
+  border: 2.5px solid #adb5bd;
   box-sizing: border-box;
   height: 19.1em;
   width: 16.1em;
@@ -408,6 +408,7 @@
   margin: auto;
   margin-top: 1em;
   border: 1px solid #cdcdcd; /*DQ: las imagenes de los productos, no se visualizan correctamente*/
+  background-color: hsl(210, 17%, 98%);
 }
 
 .pos .product .product-img-sale-extra {
@@ -2560,6 +2561,9 @@ $primary_colorit-balance{
   border: 1px solid gray;
   border-radius: 0;
   outline: none;  
+  -webkit-box-shadow: -1px -5px 17px -13px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px -5px 17px -13px rgba(0,0,0,0.75);
+  box-shadow: -1px -5px 17px -13px rgba(0,0,0,0.75);
 }
 
 .pos .product-screen .searchbox .left {
@@ -3218,7 +3222,7 @@ $primary_colorit-balance{
   margin-right: 10px !important;
   min-width: 350px;
   text-align: center;
-  background: #ffffff;
+  background-color: #495057 !important;
 }
 
 .pos .clientlist-screen .button.new-customer {
