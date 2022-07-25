@@ -16,7 +16,6 @@
       </form>
     </field>
   </record> 
-
   <record id="view_tree_curso" model="ir.ui.view">
     <field name="name">view.tree.curso</field>
     <field name="model">academia.curso</field>
@@ -37,7 +36,7 @@
 
   <menuitem
     id="curso_menu"
-    name="Cursooss"
+    parent=""
     actions="test.action_list_curso"
     sequence=""/>   
 </odoo>
