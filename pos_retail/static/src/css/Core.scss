@@ -43,8 +43,9 @@
   overflow-y: auto;
   float: right;
   width: 100px;
-  max-height: 95%;
-  border-left:1px solid $border_color;
+  max-height: 99%;
+  background-color: white;
+  // border-left:1px solid $border_color;
 }
 
 .pos .taxes-amount {
@@ -2654,10 +2655,12 @@ $primary_colorit-balance{
   overflow: hidden;
   overflow-y: auto;
   height: 100%;
+  margin-bottom: 3px;
 }
 
 
 .pos .line-container .launchpad-app-container {
+  background: #343a40;
   width: 25% !important;
   height: 75px;
   border-radius: 3px;
@@ -2698,6 +2701,11 @@ $primary_colorit-balance{
   font-weight: 400 !important;
   font-size: 13px;
   color: black;
+}
+.pos .info.selected {
+  font-weight: 400 !important;
+  font-size: 13px;
+  color: #edf2f4.pos .info;
 }
 
 .pos .lot_input {
@@ -3647,7 +3655,7 @@ $primary_colorit-balance{
 }
 
 .pos .order .orderline.selected {
-  background: $secondary_color !important;
+  background: #74c69d !important;
 }
 
 .pos .receipt-screen .top-content {
@@ -4277,8 +4285,8 @@ $primary_color-content.button {
 
 .pos .order .orderline .price {
   font-weight: 900 !important;
-  font-size: 16px !important;
-  color: $primary_color;
+  font-size: 20px !important;
+  color: #212529;
 }
 
 .pos .order .orderline .price-unit {
