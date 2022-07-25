@@ -284,8 +284,11 @@
 }
 
 .pos .product:hover {
-  -webkit-box-shadow: 0 10px 6px -6px $primary_color;
-  -moz-box-shadow: 0 10px 6px -6px $primary_color;
+  border: 2.5px solid #ced4da;
+  box-sizing: border-box;
+  height: 19.1em;
+  width: 16.1em;
+  overflow: overlay;
 }
 
 .pos .product .sale_with_package {
@@ -1848,6 +1851,9 @@ $primary_color{
 .pos .product-list {
   text-align: center;
   padding: 0px;
+  width: 100%;
+  padding-top: 15px;
+  background-image: radial-gradient(circle at 49.06% 52.58%, #ffffff 0, #f7f7f7 50%, #ffffff 100%);
   width: 100%;
 }
 
