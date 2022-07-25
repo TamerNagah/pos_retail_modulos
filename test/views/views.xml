@@ -14,7 +14,6 @@
                   <field name="title"/>
                   <field name="description"/>
               </group>
-              <field name="state"/>
           </group>
         </form>
       </field>
@@ -42,6 +41,48 @@
       name="Cursos"
       action="test.action_list_curso"
       parent="menu_root"
+      sequence="10"/>
+
+    <!-- Modelos -->
+    <record model="ir.ui.view" id="view_form_list">
+      <field name="name">view.form.list</field>
+      <field name="model">academia.list</field>
+      <field name="arch" type="xml">
+        <form string="Idea form">
+          <group colspan="4">
+              <group colspan="2" col="2">
+                  <separator string="General stuff" colspan="2"/>
+                  <field name="create_uid"/>
+                  <field name="title"/>
+                  <field name="description"/>
+              </group>
+          </group>
+        </form>
+      </field>
+    </record> 
+    <record id="view_tree_list" model="ir.ui.view">
+      <field name="name">view.tree.list</field>
+      <field name="model">academia.list</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="title"/>
+          <field name="description"/>
+          <field name="create_uid"/>
+          <field name="create_date"/>
+        </tree>
+      </field>
+    </record>
+    <record id="action_list_list" model="ir.actions.act_window">
+      <field name="name">list</field>
+      <field name="res_model">academia.list</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+      id="menu_list"
+      name="List"
+      action="test.action_list_list"
+      parent=""
       sequence="10"/>
 
     <!-- <search>
