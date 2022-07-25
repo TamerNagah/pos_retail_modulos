@@ -1,58 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record model="ir.ui.view" id="view_form_curso">
-      <field name="name">view.form.curso</field>
-      <field name="model">academia.curso</field>
-      <field name="arch" type="xml">
-        <form string="Idea form">
-          <group colspan="4">
-              <group colspan="2" col="2">
-                  <separator string="General stuff" colspan="2"/>
-                  <field name="create_uid"/>
-                  <field name="title"/>
-                  <field name="description"/>
-              </group>
+  <record model="ir.ui.view" id="view_form_curso">
+    <field name="name">view.form.curso</field>
+    <field name="model">academia.curso</field>
+    <field name="arch" type="xml">
+      <form string="Idea form">
+        <group colspan="4">
+          <group colspan="2" col="2">
+            <separator string="General stuff" colspan="2"/>
+              <field name="create_uid"/>
+              <field name="title"/>
+              <field name="description"/>
           </group>
-        </form>
-      </field>
-    </record> 
-    <record id="view_tree_curso" model="ir.ui.view">
-      <field name="name">view.tree.curso</field>
-      <field name="model">academia.curso</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="title"/>
-          <field name="description"/>
-          <field name="create_uid"/>
-          <field name="create_date"/>
-        </tree>
-      </field>
-    </record>
-    <record id="action_list_curso" model="ir.actions.act_window">
-      <field name="name">Curso</field>
-      <field name="res_model">academia.curso</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        </group>
+      </form>
+    </field>
+  </record> 
 
-    <!-- <menuitem
-      id="menu_curso"
-      name="Cursos"
-      action="test.action_list_curso"
-      parent=""/> -->
-
-    <menuitem id="propiedades_menu_root" name="Cursooooooo">
-      <menuitem id="primer_nivel__propiedades" name="Cursooo">
-        <menuitem id="menu_curso" name="Cursos" action="test.action_list_curso"/>
-      </menuitem>
-      <menuitem id="primer_nivel_clientes" name="Sesion">
-        <menuitem id="menu_sesion" name="Sesion" action="test.action_list_sesion"/>
-      </menuitem>
-    </menuitem>    
-    <!-- <search>
-        <field name="name"/>
+  <record id="view_tree_curso" model="ir.ui.view">
+    <field name="name">view.tree.curso</field>
+    <field name="model">academia.curso</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="title"/>
+        <field name="description"/>
         <field name="create_uid"/>
         <field name="create_date"/>
-        <field name="description"/>
-        <field name="title"/>
-    </search>       -->
+      </tree>
+    </field>
+  </record>
+  <record id="action_list_curso" model="ir.actions.act_window">
+    <field name="name">Curso</field>
+    <field name="res_model">academia.curso</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem id="propiedades_menu_root" name="Cursooooooo">
+    <menuitem id="primer_nivel__propiedades" name="Cursooo">
+      <menuitem id="menu_curso" name="Cursos" action="test.action_list_curso"/>
+    </menuitem>
+    <menuitem id="primer_nivel_clientes" name="Sesion">
+      <menuitem id="menu_sesion" name="Sesion" action="test.action_list_sesion"/>
+    </menuitem>
+  </menuitem>    
 </odoo>
