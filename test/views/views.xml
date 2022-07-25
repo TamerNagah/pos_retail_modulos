@@ -31,6 +31,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="curso_menu" parent="" actions="test.action_view_curso"/> 
+    <menuitem name="Cursos" id="curso_menu" parent="" actions="test.action_view_curso"/> 
 
 </odoo>
