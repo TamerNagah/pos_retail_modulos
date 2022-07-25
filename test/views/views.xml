@@ -35,12 +35,8 @@
     <field name="view_mode">tree,form</field>
   </record>
 
-  <menuitem id="propiedades_menu_root" name="Cursooooooo">
-    <menuitem id="primer_nivel__propiedades" name="Cursooo">
-      <menuitem id="menu_curso" name="Cursos" action="test.action_list_curso"/>
-    </menuitem>
-    <menuitem id="primer_nivel_clientes" name="Sesion">
-      <menuitem id="menu_sesion" name="Sesion" action="test.action_list_sesion"/>
-    </menuitem>
-  </menuitem>    
+  <menuitem
+    id="curso_menu"
+    name="Cursoo"
+    sequence=""/>   
 </odoo>
