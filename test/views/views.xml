@@ -38,5 +38,6 @@
   <menuitem
     id="curso_menu"
     name="Cursoo"
+    actions="test.action_list_curso"
     sequence=""/>   
 </odoo>
