@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
       <record id="view_tree_sesion" model="ir.ui.view">
         <field name="name">view.tree.sesion</field>
         <field name="model">academia.sesion</field>
@@ -11,6 +11,7 @@
           </tree>
         </field>
       </record>
+
       <record model="ir.ui.view" id="view_form_sesion">
         <field name="name">view.form.sesion</field>
         <field name="model">academia.sesion</field>
@@ -27,14 +28,12 @@
         </field>
       </record>
       <record id="action_list_sesion" model="ir.actions.act_window"> 
-      <field name="name">Sesion</field>
-      <field name="res_model">academia.sesion</field>
-      <field name="view_mode">tree,form</field>
-    </record>
+        <field name="name">Sesion</field>
+        <field name="res_model">academia.sesion</field>
+        <field name="view_mode">tree,form</field>
+      </record>
     <!-- <menuitem
       id="menu_sesion"
       name="Sesion"
       action="test.action_list_sesion"/> -->
-      
-    </data>
 </odoo>
