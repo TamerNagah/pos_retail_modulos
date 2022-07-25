@@ -12,7 +12,7 @@ class Curso(models.Model):
     title = models.CharField(required=True, help='Titulo del curso')
     description = models.TextField(required=True, help='Edad del usuario')
     responsable = models.Many2one('res.users', help='Responsable del curso', required=True)
-    start_date = models.DateField(help='Fecha de inicio del curso')
+    start_date = models.DateField(help='Fechaa de inicio del curso')
     finish_date = models.DateField(help='Fecha de fin del curso')
     
     
