@@ -7,7 +7,7 @@ from odoo import models, fields, api
 class Curso(models.Model):
     
     _name = 'academia.curso'
-    _description = 'Descripción del cursos'
+    _description = 'Descripción del curssos'
 
     title = models.CharField(required=True, help='Titulo del curso')
     description = models.TextField(required=True, help='Edad del usuario')
