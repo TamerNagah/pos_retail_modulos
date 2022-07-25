@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <!-- Vistas -->
-
     <record model="ir.ui.view" id="view_form_curso">
       <field name="name">view.form.curso</field>
       <field name="model">academia.curso</field>
@@ -58,5 +55,4 @@
         <field name="description"/>
         <field name="title"/>
     </search>       -->
-  </data>
 </odoo>
