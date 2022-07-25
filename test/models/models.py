@@ -9,16 +9,15 @@ class Curso(models.Model):
     _name = 'academia.curso'
     _description = 'Descripción del curssos'
 
-    title = models.CharField(required=True, help='Titulo del curso')
-    description = models.TextField(required=True, help='Edad del usuario')
-    responsable = models.Many2one('res.users', help='Responsable del curso', required=True)
-    start_date = models.DateField(help='Fechaa de inicio del curso')
-    finish_date = models.DateField(help='Fecha de fin del curso')
-    
+    title = fields.Char(required=True, help='Titulo del curso')
+    description = fields.Char(required=True, help='Edad del usuario')
+    responsable = fields.Many2one('res.users', help='Responsable del curso', required=True)
+    start_date = fields.Date(help='Fechaa de inicio del curso')
+    finish_date = fields.Date(help='Fecha de fin del curso')
     
 class Sesion(models.Model):
     _name = 'academia.sesion'
     _description = 'Descripción de las sesiones'
     
-    curso = models.Many2one('academia.curso', help='Curso de la sesion')
-    instructor = models.Many2one('res.users', help='Instructor del curso')        
+    curso = fields.Many2one('academia.curso', help='Curso de la sesion')
+    instructor = fields.Many2one('res.users', help='Instructor del curso')        
