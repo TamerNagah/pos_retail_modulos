@@ -1,61 +1,6 @@
 <odoo>
   <data>
-    <record id="action_list_ideas" model="ir.actions.act_window"> 
-      <field name="name">Ideas</field>
-      <field name="res_model">academia.ideas</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    <record id="action_list_curso" model="ir.actions.act_window">
-      <field name="name">Curso</field>
-      <field name="res_model">academia.curso</field>
-      <field name="view_mode">tree,form</field>
-    </record>
     <!-- Vistas -->
-    <record model="ir.ui.view" id="view_form_ideas">
-    <field name="name">view.form.ideas</field>
-    <field name="model">academia.ideas</field>
-    <field name="arch" type="xml">
-      <form string="Idea form">
-        <group colspan="4">
-            <group colspan="2" col="2">
-                <separator string="General stuff" colspan="2"/>
-                <field name="name"/>
-                <field name="inventor_id"/>
-            </group>
-
-            <group colspan="2" col="2">
-                <separator string="Dates" colspan="2"/>
-                <field name="active"/>
-                <field name="invent_date" readonly="1"/>
-            </group>
-
-            <notebook colspan="4">
-                <page string="Description">
-                    <field name="description" nolabel="1"/>
-                </page>
-            </notebook>
-            <notebook colspan="4">
-                <field name="responsable"/>
-                <field name="start_date"/>
-                <field name="finish_date"/>
-            </notebook>
-
-            <field name="state"/>
-        </group>
-      </form>
-    </field>
-    </record>    
-    
-    <record id="view_tree_ideas" model="ir.ui.view">
-      <field name="name">view.tree.ideas</field>
-      <field name="model">academia.ideas</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="inventor_id"/>
-          <field name="invent_date"/>
-        </tree>
-      </field>
-    </record>
 
     <record model="ir.ui.view" id="view_form_curso">
       <field name="name">view.form.curso</field>
@@ -87,18 +32,17 @@
         </tree>
       </field>
     </record>
+    <record id="action_list_curso" model="ir.actions.act_window">
+      <field name="name">Curso</field>
+      <field name="res_model">academia.curso</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
-
-    <menuitem
-      id="menu_ideas"
-      name="Ideas"
-      action="test.action_list_ideas"
-      parent="menu_root"
-      sequence="10"/>
     <menuitem
       id="menu_curso"
       name="Cursos"
       action="test.action_list_curso"
+      parent="menu_root"
       sequence="10"/>
 
     <!-- <search>

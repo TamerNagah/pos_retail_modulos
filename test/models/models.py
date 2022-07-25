@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from tkinter import W
 from odoo import models, fields, api
 
 
