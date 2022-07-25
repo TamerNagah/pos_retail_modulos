@@ -37,7 +37,9 @@
         <field name="res_model">academia.curso</field>
         <field name="view_mode">tree,form</field>
     </record>
-
-    <menuitem name="Cursos" id="curso_menu" parent="" actions="test.action_view_curso"/>
-
+    <menuitem
+        id="meny_curso"
+        name="Cursoo"
+        action="test.action_view_curso"
+        parent="" />
 </odoo>
