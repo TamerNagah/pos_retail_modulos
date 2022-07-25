@@ -265,11 +265,12 @@
 }
 
 .pos .product {
-  cursor: pointer;
-  height: 16em;
+  cursor:cell;
+  height: 19em !important;
   margin: 0.5em !important;
   width: 16em;
   border-bottom-width: 1px;
+  outline: none;
 }
 
 .pos .clientlist-screen .client-details-box button {
@@ -397,14 +398,16 @@
   text-align: center;
   font-size: 13px;
   z-index: 9999;
+  padding: 0 5px 0 5px;
 }
 
 .pos .product .product-img {
   position: relative;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 88%;
   margin: auto;
-  margin-top: 3.3em; /*DQ: las imagenes de los productos, no se visualizan correctamente*/
+  margin-top: 1em;
+  border: 1px solid #cdcdcd; /*DQ: las imagenes de los productos, no se visualizan correctamente*/
 }
 
 .pos .product .product-img-sale-extra {
@@ -1430,6 +1433,7 @@ $primary_color{
   z-index: 999;
   background: #fff;
   color: black;
+  font-size: 18px;
 }
 
 .pos .service-charge-button {
@@ -1982,7 +1986,7 @@ $primary_color{
 
 .pos .breadcrumb-button.breadcrumb-home {
   height: 100%;
-  background: #6ec89b !important;
+  // background: #6ec89b !important;
   border-radius: 0px !important;
   margin-left: 0px;
   width: unset;
@@ -2020,9 +2024,9 @@ $primary_color{
 }
 
 .pos .breadcrumb-button.breadcrumb-home:hover {
-  -webkit-box-shadow: 0 10px 6px -6px $primary_color;
-  -moz-box-shadow: 0 10px 6px -6px $primary_color;
-  background: $secondary_color;
+  // -webkit-box-shadow: 0 10px 6px -6px $primary_color;
+  // -moz-box-shadow: 0 10px 6px -6px $primary_color;
+  // background: $secondary_color;
 }
 
 .pos .header_order {
@@ -2184,6 +2188,7 @@ $primary_color{
   display: inline-block;
   font-size: 9px !important;
   margin-right: 5px;
+  display: none;
 }
 
 .pos .orderline-name {
@@ -2553,6 +2558,8 @@ $primary_colorit-balance{
   width: 350px;
   text-align: center;
   border: 1px solid gray;
+  border-radius: 0;
+  outline: none;  
 }
 
 .pos .product-screen .searchbox .left {
