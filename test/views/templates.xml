@@ -31,10 +31,10 @@
       <field name="res_model">academia.sesion</field>
       <field name="view_mode">tree,form</field>
     </record>
-    <menuitem
+    <!-- <menuitem
       id="menu_sesion"
       name="Sesion"
-      action="test.action_list_sesion"/>
+      action="test.action_list_sesion"/> -->
       
     </data>
 </odoo>
