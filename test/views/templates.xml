@@ -13,7 +13,7 @@
         <field name="name">view.form.sesion</field>
         <field name="model">academia.sesion</field>
         <field name="arch" type="xml">
-          <form string="Idea form">
+          <form string="Fonmulario del curso">
             <group colspan="4">
                 <group colspan="2" col="2">
                     <separator string="General stuff" colspan="2"/>

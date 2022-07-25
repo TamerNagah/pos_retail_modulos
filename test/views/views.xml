@@ -10,7 +10,7 @@
           <group colspan="4">
               <group colspan="2" col="2">
                   <separator string="General stuff" colspan="2"/>
-                  <field name="inventor_id"/>
+                  <field name="create_uid"/>
                   <field name="title"/>
                   <field name="description"/>
               </group>
@@ -26,8 +26,8 @@
         <tree>
           <field name="title"/>
           <field name="description"/>
-          <field name="inventor_id"/>
-          <field name="invent_date"/>
+          <field name="create_uid"/>
+          <field name="create_date"/>
         </tree>
       </field>
     </record>
@@ -46,8 +46,8 @@
 
     <!-- <search>
         <field name="name"/>
-        <field name="inventor_id"/>
-        <field name="invent_date"/>
+        <field name="create_uid"/>
+        <field name="create_date"/>
         <field name="description"/>
         <field name="title"/>
     </search>       -->
