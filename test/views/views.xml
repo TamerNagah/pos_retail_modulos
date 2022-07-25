@@ -10,7 +10,6 @@
           <group colspan="4">
               <group colspan="2" col="2">
                   <separator string="General stuff" colspan="2"/>
-                  <field name="name"/>
                   <field name="inventor_id"/>
                   <field name="title"/>
                   <field name="description"/>
