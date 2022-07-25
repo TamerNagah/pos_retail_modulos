@@ -6,7 +6,6 @@
         <field name="arch" type="xml">
             <tree string="Vista tree">
                 <field name="title"/>
-                <field name="description"/>
             </tree>
         </field>
     </record>
@@ -23,6 +22,8 @@
                     <group>
                         <field name="title"/>
                         <field name="description"/>
+                        <field name="responsable"/>
+                        <field name="start_date"/>
                     </group>
                 </sheet>
             </form>
