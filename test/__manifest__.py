@@ -25,7 +25,8 @@
     # always loaded
     'data': [
         'security/security.xml',
-        'views/views.xml',
+        'views/vistas.xml',
+        # 'views/views.xml',
         # 'views/templates.xml',
     ],
     # only loaded in demonstration mode

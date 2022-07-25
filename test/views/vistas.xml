@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_tree_curso" model="ir.ui.view">
+        <field name="name">view.tre.curso</field>
+        <field name="model">academia.curso</field>
+        <field name="arch" type="xml">
+            <tree string="Vista tree">
+                <field name="title"/>
+                <field name="description"/>
+                <field name="create_uid"/>
+                <field name="create_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_form_curso" model="ir.ui.view">
+        <field name="name">view.form.curso</field>
+        <field name="model">academia.curso</field>
+        <field name="arch" type="xml">
+            <form string="vista form">
+                <header>
+                    <field name="create_uid"/>
+                    <field name="title"/>
+                    <field name="description"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="create_uid"/>
+                        <field name="title"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_view_curso" model="ir.actions.act_window">
+        <field name="name">Curso</field>
+        <field name="res_model">academia.curso</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+</odoo>
