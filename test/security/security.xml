@@ -3,7 +3,7 @@
 
     <record id="model_access_curso" model="ir.model.access">
         <field name="name">model.access.curso</field>
-        <field name="model_id" ref="test.model_test" />
+        <field name="model_id" ref="test.model_academia_curso" />
         <field name="group_id" ref="base.group_system" />
         <field name="perm_read" eval="1" /> 
         <field name="perm_write" eval="1" />
