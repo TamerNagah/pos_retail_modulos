@@ -40,5 +40,5 @@
       parent=""
       actions="test.action_list_curso"
       sequence=""/>   
-  <data>
+  </data>
 </odoo>
