@@ -1,24 +1,39 @@
 <odoo>
     <data>
-<!--
-        <template id="listing">
-          <ul>
-            <li t-foreach="objects" t-as="object">
-              <a t-attf-href="#{ root }/objects/#{ object.id }">
-                <t t-esc="object.display_name"/>
-              </a>
-            </li>
-          </ul>
-        </template>
-        <template id="object">
-          <h1><t t-esc="object.display_name"/></h1>
-          <dl>
-            <t t-foreach="object._fields" t-as="field">
-              <dt><t t-esc="field"/></dt>
-              <dd><t t-esc="object[field]"/></dd>
-            </t>
-          </dl>
-        </template>
--->
+      <record id="view_tree_ideas" model="ir.ui.view">
+        <field name="name">view.tree.sesion</field>
+        <field name="model">academia.sesion</field>
+        <field name="arch" type="xml">
+          <tree>
+            <field name="curso"/>
+          </tree>
+        </field>
+      </record>
+      <record model="ir.ui.view" id="view_form_curso">
+        <field name="name">view.form.sesion</field>
+        <field name="model">academia.sesion</field>
+        <field name="arch" type="xml">
+          <form string="Idea form">
+            <group colspan="4">
+                <group colspan="2" col="2">
+                    <separator string="General stuff" colspan="2"/>
+                    <field name="curso"/>
+                </group>
+            </group>
+          </form>
+        </field>
+      </record>
+      <record id="action_list_sesion" model="ir.actions.act_window"> 
+      <field name="name">Sesion</field>
+      <field name="res_model">academia.sesion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+      id="menu_sesion"
+      name="Sesion"
+      action="test.action_list_sesion"
+      parent="menu_root"
+      sequence="10"/>
+      
     </data>
 </odoo>
