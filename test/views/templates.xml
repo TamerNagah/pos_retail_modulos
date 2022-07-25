@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-      <record id="view_tree_sesion" model="ir.ui.view">
-        <field name="name">view.tree.sesion</field>
-        <field name="model">academia.sesion</field>
-        <field name="arch" type="xml">
-          <tree>
-            <field name="curso"/>
-            <field name="create_uid"/>
-            <field name="instructor"/>
-          </tree>
-        </field>
-      </record>
+  <record id="view_tree_sesion" model="ir.ui.view">
+    <field name="name">view.tree.sesion</field>
+    <field name="model">academia.sesion</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="curso"/>
+        <field name="create_uid"/>
+        <field name="instructor"/>
+      </tree>
+    </field>
+  </record>
 
-      <record model="ir.ui.view" id="view_form_sesion">
-        <field name="name">view.form.sesion</field>
-        <field name="model">academia.sesion</field>
-        <field name="arch" type="xml">
-          <form string="Fonmulario del curso">
-            <group colspan="4">
-                <group colspan="2" col="2">
-                    <separator string="General datos" colspan="2"/>
-                    <field name="curso"/>
-                    <field name="instructor"/>
-                </group>
-            </group>
-          </form>
-        </field>
-      </record>
-      <record id="action_list_sesion" model="ir.actions.act_window"> 
-        <field name="name">Sesion</field>
-        <field name="res_model">academia.sesion</field>
-        <field name="view_mode">tree,form</field>
-      </record>
-    <!-- <menuitem
-      id="menu_sesion"
-      name="Sesion"
-      action="test.action_list_sesion"/> -->
+  <record model="ir.ui.view" id="view_form_sesion">
+    <field name="name">view.form.sesion</field>
+    <field name="model">academia.sesion</field>
+    <field name="arch" type="xml">
+      <form string="Fonmulario del curso">
+        <group colspan="4">
+          <group colspan="2" col="2">
+            <separator string="General datos" colspan="2"/>
+              <field name="curso"/>
+              <field name="instructor"/>
+          </group>
+        </group>
+      </form>
+    </field>
+  </record>
+  <record id="action_list_sesion" model="ir.actions.act_window"> 
+    <field name="name">Sesion</field>
+    <field name="res_model">academia.sesion</field>
+    <field name="view_mode">tree,form</field>
+  </record>
 </odoo>
