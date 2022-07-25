@@ -1,23 +1,26 @@
 <odoo>
     <data>
-      <record id="view_tree_ideas" model="ir.ui.view">
+      <record id="view_tree_sesion" model="ir.ui.view">
         <field name="name">view.tree.sesion</field>
         <field name="model">academia.sesion</field>
         <field name="arch" type="xml">
           <tree>
             <field name="curso"/>
+            <field name="create_uid"/>
+            <field name="instructor"/>
           </tree>
         </field>
       </record>
-      <record model="ir.ui.view" id="view_form_curso">
+      <record model="ir.ui.view" id="view_form_sesion">
         <field name="name">view.form.sesion</field>
         <field name="model">academia.sesion</field>
         <field name="arch" type="xml">
           <form string="Fonmulario del curso">
             <group colspan="4">
                 <group colspan="2" col="2">
-                    <separator string="General stuff" colspan="2"/>
+                    <separator string="General datos" colspan="2"/>
                     <field name="curso"/>
+                    <field name="instructor"/>
                 </group>
             </group>
           </form>

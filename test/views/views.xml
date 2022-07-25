@@ -41,8 +41,7 @@
       id="menu_curso"
       name="Cursos"
       action="test.action_list_curso"
-      parent="menu_root"
-      sequence="10"/>
+      parent=""/>
     <!-- <search>
         <field name="name"/>
         <field name="create_uid"/>
