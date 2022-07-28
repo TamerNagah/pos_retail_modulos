@@ -1,18 +1,26 @@
 # -*- coding: utf-8 -*-
+from odoo import models, fields, api
 
-# from odoo import models, fields, api
+class Academia(models.Model):
+    _name = 'academia.academia'
+    _description = 'Este modulo es para la academia'
 
-
-# class academia(models.Model):
-#     _name = 'academia.academia'
-#     _description = 'academia.academia'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+    name = fields.Char(string="Nombre", required=True)
+    description = fields.Text(string="Descripción")
+    active = fields.Boolean(string="Activo", default=True)
+    # Relaciones
+    # profesor_ids = fields.One2many(
+    #     'academia.profesor',
+    #     'academia_id',
+    #     string="Profesores"
+    # )
+    # alumno_ids = fields.One2many(
+    #     'academia.alumno',
+    #     'academia_id',
+    #     string="Alumnos"
+    # )
+    # curso_ids = fields.One2many(
+    #     'academia.curso',
+    #     'academia_id',
+    #     string="Cursos"
+    # )
