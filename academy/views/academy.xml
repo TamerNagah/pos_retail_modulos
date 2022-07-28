@@ -21,8 +21,6 @@
                                 <br />
                                 <field name="last_name" placeholder="Apellido" nolabel="1"/>
                                 <br />
-                                <field name="idioma" placeholder="Idioma" nolabel="1" attrs="{'readonly':[('state','=','alumni')]}"/>
-                                <br/>
                                 <field name="idioma"/>
                             </group>
                         </div>

@@ -36,4 +36,4 @@ class StudentStudent(models.Model):
     gender = fields.Selection([('masculino', 'Masculino'), ('femenino', 'Femenino')],
                               'Genero')
     
-    remark = fields.Text('Notas', states={'done': [('readonly', True)]})
+    remark = fields.Text('Notas')
