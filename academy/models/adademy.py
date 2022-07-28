@@ -1,12 +1,4 @@
-from msilib import sequence
-import re
-import calendar
-from unicodedata import name
 from odoo import models, fields, api
-from odoo.tools.translate import _
-from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
-from odoo.exceptions import UserError, ValidationError
-from dateutil.relativedelta import relativedelta
 
 class IdiomaEstandar(models.Model):
     
