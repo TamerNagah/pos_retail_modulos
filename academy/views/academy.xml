@@ -12,7 +12,7 @@
                     <div class="oe_inline">
                         <newline />
                         <separator string="Informacion Personal" />
-                        <field name="photo" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" />
+                        <!-- <field name="photo" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" /> -->
                         <div class="oe_title">
                             <group>
                                 <field name="pid" nolabel="1" readonly="1"/>
