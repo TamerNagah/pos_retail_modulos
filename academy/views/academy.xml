@@ -12,7 +12,7 @@
                     <div class="oe_inline">
                         <newline />
                         <separator string="Informacion Personal" />
-                        <!-- <field name="photo" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" /> -->
+                        <field name="photo" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" />
                         <div class="oe_title">
                             <group>
                                 <field name="pid" nolabel="1" readonly="1"/>
@@ -21,7 +21,7 @@
                                 <br />
                                 <field name="last_name" placeholder="Apellido" nolabel="1"/>
                                 <br />
-                                <field name="idioma"/>
+                                <!-- <field name="idioma"/> -->
                             </group>
                         </div>
                     </div>
@@ -29,9 +29,9 @@
                         <group string="Informacion de la Escuela">
                             <field name="academy" placeholder="Academia"/>
                         </group>
-                        <group string="Class Information">
+                        <!-- <group string="Class Information">
                             <field name="clase" placeholder="Clase"/>
-                        </group>
+                        </group> -->
                     </group>
                     <group colspan="4">
                         <group>
