@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr','crm','account'],
+    'depends': ['base','hr'],
 
     # always loaded
     'data': [
@@ -34,6 +34,6 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'installable': True,
-    'application': True
+    # 'installable': True,
+    # 'application': True
 }
