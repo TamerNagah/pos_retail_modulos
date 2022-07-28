@@ -4,7 +4,6 @@ from datetime import date
 from odoo import models, fields, api, _
 from odoo.modules import get_module_resource
 from odoo.exceptions import UserError, ValidationError
-from .import academy
 
 class StudentStudent(models.Model):
     """Clase estudiante que hereda de la clase abstracta User """
