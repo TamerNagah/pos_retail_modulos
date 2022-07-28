@@ -2,4 +2,3 @@
 
 from . import student
 from . import academy
-from . import models
