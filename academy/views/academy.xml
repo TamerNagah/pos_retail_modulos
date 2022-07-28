@@ -87,14 +87,14 @@
     <record id="action_student_student_form_2" model="ir.actions.act_window">
         <field name="name">REGISTRO de Matricula</field>
         <field name="res_model">student.student</field>
-        <field name="view_id" ref="view_student_student_form_2" />
+        <!-- <field name="view_id" ref="view_student_student_form_2" /> -->
         <field name="view_mode">tree,form</field>
     </record>
-    <record id="action_student_student_tree_2" model="ir.actions.act_window.view">
+    <!-- <record id="action_student_student_tree_2" model="ir.actions.act_window.view">
         <field name="view_mode">tree</field>
         <field eval="20" name="sequence" />
         <field name="view_id" ref="view_student_student_tree_2" />
-        <field name="act_window_id" ref="action_student_student_form_2" />
+        <field name="act_window_id" ref="action_student_student_form_2" /> -->
     </record>
     <menuitem id="menu_ems" name="EMS" web_icon="academy,static/description/academy.jpg" sequence="1"/>
     <menuitem id="admission_register" name="REGISTRO DE MATRICULA" parent="menu_ems" sequence="2"/>
