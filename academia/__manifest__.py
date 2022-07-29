@@ -26,7 +26,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/academia.xml',
-        'views/templates.xml',
+        # 'views/templates.xml',
         'security/security.xml',
     ],
     # only loaded in demonstration mode

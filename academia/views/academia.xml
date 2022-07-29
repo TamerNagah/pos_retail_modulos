@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="view_academia_academia_form" model="ir.ui.view">
-        <field name="name">academia.academia.form</field>
+        <field name="name">Vista form de academia</field>
         <field name="model">academia.academia</field>
         <field name="arch" type="xml">
             <form string="Academiaa">
                 <header>
+                    <h4>Hola </h4>
                 </header>
                 <sheet>
                     <div class="oe_inline">
                         <newline />
                         <separator string="Informacion Personal" />
-                        <!-- <field name="photo" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" /> -->
+                        <field name="image_1920" widget="image" class="oe_avatar oe_left" style="max-width:100px;max-height:117px;" />
                         <div class="oe_title">
                             <group>
-                                <field name="name" placeholder="Nombres" nolabel="1"/>
+                                <field name="name" placeholder="Nombres"/>
                                 <br />
                                 <field name="description" nolabel="1"/>
                                 <br />
@@ -29,7 +30,7 @@
         </field>
     </record>
     <record id="view_academia_academia_tree" model="ir.ui.view">
-        <field name="name">academia.academia.tree</field>
+        <field name="name">Vista tree de academia</field>
         <field name="model">academia.academia</field>
         <field name="arch" type="xml">
             <tree string="">
@@ -46,8 +47,15 @@
     </record>
     <menuitem
         id="academia_menu"
-        name="ACADEMIA"
-        action="academia.action_academia_academia"
-        sequence=""/>
+        name="Academia"/>
+    <menuitem
+        id="h_academia_menu"
+        name="Registro"
+        parent="academia_menu"/>
+    <menuitem
+        id="v_matricula_menu"
+        name="Matricula"
+        action="action_academia_academia"
+        parent="academia_menu"/>
     
 </odoo>
